@@ -14,6 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/image_desc"
         app:srcCompat="@drawable/logo" />
 
     <TextView
@@ -23,7 +24,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/desc_app"
         android:textAlignment="center"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@id/main_imagem_logo"
         app:layout_constraintStart_toStartOf="@id/main_imagem_logo"
         app:layout_constraintTop_toBottomOf="@id/main_imagem_logo" />
@@ -37,11 +38,12 @@
         app:layout_constraintStart_toStartOf="@id/main_imagem_logo"
         app:layout_constraintTop_toBottomOf="@id/main_desc_app">
 
-        <android.support.design.widget.TextInputEditText
+        <EditText
             android:id="@+id/main_edit_preco_alcool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_preco_alcool"/>
+            android:hint="@string/hint_preco_alcool"
+            android:inputType="numberDecimal" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -55,11 +57,12 @@
         app:layout_constraintStart_toStartOf="@id/main_imagem_logo"
         app:layout_constraintTop_toBottomOf="@id/main_layout_preco_alcool">
 
-        <android.support.design.widget.TextInputEditText
+        <EditText
             android:id="@+id/main_edit_preco_gasolina"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/hint_preco_gasolina" />
+            android:hint="@string/hint_preco_gasolina"
+            android:inputType="numberDecimal" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -67,23 +70,23 @@
         android:id="@+id/main_button_calc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/text_button"
         android:layout_marginTop="10dp"
-        android:inputType="numberDecimal"
-        app:layout_constraintStart_toStartOf="@id/main_layout_preco_gasolina"
+        android:text="@string/text_button"
         app:layout_constraintEnd_toEndOf="@id/main_layout_preco_gasolina"
-        app:layout_constraintTop_toBottomOf="@id/main_layout_preco_gasolina"/>
+        app:layout_constraintStart_toStartOf="@id/main_layout_preco_gasolina"
+        app:layout_constraintTop_toBottomOf="@id/main_layout_preco_gasolina" />
 
     <TextView
+        android:id="@+id/main_text_result"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:textSize="18dp"
-        android:textStyle="bold"
+        android:text="@string/text_result"
         android:textAlignment="center"
-        tools:text="@string/text_result"
-        app:layout_constraintTop_toBottomOf="@id/main_button_calc"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/main_button_calc"
         app:layout_constraintStart_toStartOf="@id/main_button_calc"
-        app:layout_constraintEnd_toEndOf="@id/main_button_calc"/>
+        app:layout_constraintTop_toBottomOf="@id/main_button_calc" />
 
 </android.support.constraint.ConstraintLayout>
